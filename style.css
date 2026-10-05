@@ -1,14 +1,21 @@
+:root {
+    --mist: #b7c0af;
+    --sage: #83938a;
+    --asphalt: #171c1a;
+    --track: #28221d;
+    --ember: #d9432f;
+    --cream: #f2e9d8;
+}
+
 html {
     min-height: 100%;
-    background: #ff0050 url('img.png') center center / cover fixed no-repeat;
-    color: #111018;
+    background: #30332c url('img.png') center center / cover fixed no-repeat;
+    color: var(--cream);
     text-align: center;
     overflow-x: hidden;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     width: 100%;
@@ -17,207 +24,70 @@ body {
     padding: 22px 26px 34px;
     font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0.025em;
+    background: linear-gradient(115deg, rgba(14, 19, 17, 0.62), rgba(23, 28, 26, 0.18) 58%, rgba(16, 13, 10, 0.56));
 }
 
 .page-frame {
-    width: 100%;
-    max-width: 1600px;
-    min-height: calc(100vh - 56px);
-    margin: 0 auto;
-    padding: 34px 28px 30px;
-    border: 1px solid rgba(17, 16, 24, 0.82);
-    border-radius: 3px;
-    background: rgba(255, 0, 80, 0.08);
-    box-shadow: 0 0 0 1px rgba(255, 0, 80, 0.2), 0 16px 50px rgba(18, 0, 9, 0.12);
+    width: 100%; max-width: 1600px; min-height: calc(100vh - 56px); margin: 0 auto; padding: 34px 28px 30px;
+    border: 1px solid rgba(242, 233, 216, 0.3); border-radius: 12px; background: rgba(21, 27, 25, 0.61);
+    box-shadow: 0 20px 60px rgba(8, 9, 8, 0.45), inset 0 1px rgba(255, 255, 255, 0.1); backdrop-filter: blur(7px);
 }
 
 #msgs {
-    margin: 8px 0 18px;
-    color: #15131b;
-    font-size: clamp(25px, 4vw, 46px);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+    margin: 8px 0 18px; color: var(--cream); font-size: clamp(25px, 4vw, 46px); font-weight: 800; line-height: 1.1;
+    letter-spacing: 0.12em; text-transform: uppercase; text-shadow: 0 3px 14px rgba(0, 0, 0, 0.65);
 }
 
-hr {
-    width: min(100%, 1060px);
-    height: 1px;
-    margin: 0 auto 26px;
-    border: 0;
-    background: rgba(17, 16, 24, 0.65);
-}
+hr { width: min(100%, 1060px); height: 2px; margin: 0 auto 26px; border: 0; background: linear-gradient(90deg, transparent, var(--ember), transparent); }
 
 #menu {
-    width: min(100%, 860px);
-    margin: 0 auto;
-    padding: 26px 28px 24px;
-    border: 1px solid rgba(17, 16, 24, 0.72);
-    border-radius: 3px;
-    background: rgba(255, 0, 80, 0.88);
-    box-shadow: 0 12px 34px rgba(18, 0, 9, 0.22);
+    width: min(100%, 860px); margin: 0 auto; padding: 26px 28px 24px; border: 1px solid rgba(183, 192, 175, 0.35);
+    border-top: 3px solid var(--ember); border-radius: 8px; background: rgba(23, 28, 26, 0.88); box-shadow: 0 16px 38px rgba(0, 0, 0, 0.38);
 }
 
-#menu h2 {
-    margin: 0 0 22px;
-    color: #15131b;
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
+#menu h2 { margin: 0 0 22px; color: var(--mist); font-size: 18px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
 
-.firmware-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    max-width: 650px;
-    margin: 0 auto;
-}
+.firmware-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 650px; margin: 0 auto; }
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 54px;
-    padding: 12px 16px;
-    border: 1px solid #17151e;
-    border-radius: 2px;
-    background: #17151e;
-    color: #ff1760;
-    text-align: center;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.07em;
-    line-height: 1.25;
-    text-transform: uppercase;
-    box-shadow: 4px 4px 0 rgba(17, 16, 24, 0.2);
-    transition: background-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
-    cursor: pointer;
+    display: flex; align-items: center; justify-content: center; width: 100%; min-height: 54px; padding: 12px 16px;
+    border: 1px solid rgba(183, 192, 175, 0.45); border-radius: 4px; background: rgba(35, 42, 38, 0.94); color: var(--cream);
+    text-align: center; text-decoration: none; font-family: inherit; font-size: 16px; font-weight: 800; letter-spacing: 0.07em;
+    line-height: 1.25; text-transform: uppercase; box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.16s ease; cursor: pointer;
 }
 
-.btn:hover,
-.btn:focus {
-    background: #fff0f5;
-    color: #17151e;
-    outline: none;
-    transform: translateY(-2px);
-}
+.btn:hover, .btn:focus { border-color: var(--ember); background: var(--ember); color: #fff8ed; outline: none; transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn-multi { border-color: var(--ember); background: var(--ember); color: #fff8ed; }
+.btn-multi:hover, .btn-multi:focus { background: var(--cream); color: var(--asphalt); }
+.btn-restore { grid-column: 1 / -1; max-width: 319px; justify-self: center; }
 
-.btn:active {
-    transform: translateY(0);
-}
-
-.btn-multi {
-    background: #fff0f5;
-    color: #17151e;
-}
-
-.btn-multi:hover,
-.btn-multi:focus {
-    background: #17151e;
-    color: #ff1760;
-}
-
-.btn-restore {
-    grid-column: 1 / -1;
-    max-width: 319px;
-    justify-self: center;
-}
-
-.credits {
-    margin: 30px auto 0;
-    color: #17151e;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.7;
-}
-
-.credits a {
-    color: #17151e;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-}
-
-.credits a:hover {
-    color: #fff0f5;
-}
+.credits { margin: 30px auto 0; color: var(--mist); font-size: 14px; font-weight: 700; line-height: 1.7; }
+.credits a { color: var(--cream); text-decoration-color: var(--ember); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.credits a:hover { color: var(--ember); }
 
 @media (max-width: 640px) {
-    html {
-        background-position: 42% center;
-        background-attachment: scroll;
-    }
-
-    body {
-        padding: 12px;
-    }
-
-    .page-frame {
-        min-height: calc(100vh - 24px);
-        padding: 24px 12px 18px;
-    }
-
-    #menu {
-        padding: 22px 14px 20px;
-    }
-
-    .firmware-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .btn-restore {
-        grid-column: auto;
-        max-width: none;
-    }
+    html { background-position: 42% center; background-attachment: scroll; }
+    body { padding: 12px; }
+    .page-frame { min-height: calc(100vh - 24px); padding: 24px 12px 18px; border-radius: 8px; }
+    #menu { padding: 22px 14px 20px; }
+    .firmware-grid { grid-template-columns: 1fr; gap: 10px; }
+    .btn-restore { grid-column: auto; max-width: none; }
 }
 
 /* Exploit host status screen */
-.exploit-status {
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-}
-
-.exploit-status > h1:not(#msgs) {
-    color: #17151e;
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 0.01em;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
-}
+.exploit-status { font-family: "Trebuchet MS", Verdana, sans-serif; }
+.exploit-status > h1:not(#msgs) { color: var(--cream); font-family: "Trebuchet MS", Verdana, sans-serif; font-size: 30px; font-weight: 800; letter-spacing: 0.01em; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.62); }
 
 .exploit-status #msgs.status-message {
-    width: min(100%, 900px);
-    margin: 77px auto 455px;
-    padding: 22px 24px;
-    border: 1px solid #ff1760;
-    border-radius: 3px;
-    background: rgba(18, 16, 24, 0.94);
-    color: #fff0f5;
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.4;
-    letter-spacing: 0.035em;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
-    box-shadow: 0 8px 24px rgba(18, 0, 9, 0.3);
+    width: min(100%, 900px); margin: 77px auto 455px; padding: 22px 24px; border: 1px solid rgba(242, 233, 216, 0.4);
+    border-left: 4px solid var(--ember); border-radius: 6px; background: rgba(23, 28, 26, 0.94); color: var(--cream);
+    font-family: "Trebuchet MS", Verdana, sans-serif; font-size: 30px; font-weight: 700; line-height: 1.4; letter-spacing: 0.035em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.42);
 }
 
 @media (max-width: 640px) {
-    .exploit-status > h1:not(#msgs) {
-        font-size: 25px;
-    }
-
-    .exploit-status #msgs.status-message {
-        margin: 55px auto 300px;
-        padding: 18px 14px;
-        font-size: 22px;
-    }
+    .exploit-status > h1:not(#msgs) { font-size: 25px; }
+    .exploit-status #msgs.status-message { margin: 55px auto 300px; padding: 18px 14px; font-size: 22px; }
 }
