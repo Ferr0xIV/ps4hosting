@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html manifest="slopkit.manifest">
+<head>
+<title>Attivatore GoldHEN per tutte le PS4</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="exploit-status">
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installando la cache offline: " + Percent + "%";}
+function DisplayCacheProgress(){window.msgs.innerHTML="Cache installata con successo! ✔";setTimeout(function(){window.msgs.innerHTML="Chiudi e riapri il browser..";},1500);}
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.applicationCache.onerror=function(e){window.msgs.innerHTML="Errore nell'installazione della cache! Pulisci il browser, chiudilo e riaprilo!";};
+</script>
+<h1>Attivatore GoldHEN per tutte le PS4</h1>
+<hr>
+<br>
+<h1 id="msgs" class="status-message">Stiamo rendendo l'exploit disponibile offline..</h1>
+</body>
+</html>
