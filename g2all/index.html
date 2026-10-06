@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080d18"><title>Attivatore GoldHEN per tutte le PS4.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080d18"><title>GoldHEN Activator for All PS4 Consoles.</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="exploit-status">
@@ -9,16 +9,16 @@
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
 var isPS4 = match !== null;
-var fwVersion = isPS4 ? match[1] : "Sconosciuto";
+var fwVersion = isPS4 ? match[1] : "Unknown";
 var fwNum = parseFloat(fwVersion);
 
 function onScriptError() {
-    msgs.innerHTML = "Contenuto non trovato! Pulisci il browser (elimina Cookie e dati dei siti) e riprova..";
+    msgs.innerHTML = "Content not found! Clear your browser (delete cookies and site data) and try again..";
 }
 
 if (!isPS4) {
     document.addEventListener("DOMContentLoaded", () => {
-        msgs.innerHTML = "Solo per PS4 con firmware 13.52 in giù!";
+        msgs.innerHTML = "Only for PS4 consoles running firmware 13.52 or lower!";
     });
 } else {
     if (window.applicationCache.status == '0') {
@@ -93,10 +93,10 @@ if (!isPS4) {
     }
 }
 </script>
-<h1>Attivatore GoldHEN per tutte le PS4</h1>
+<h1>GoldHEN Activator for All PS4 Consoles</h1>
 <hr>
 <br>
-<h1 id="msgs" class="status-message">Iniettando GoldHEN v2.4b18.12, dacci un attimo.</h1>
+<h1 id="msgs" class="status-message">Injecting GoldHEN v2.4b18.12, please wait a moment.</h1>
 </body>
 </html>
 
